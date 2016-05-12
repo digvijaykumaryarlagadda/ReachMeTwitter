@@ -114,4 +114,53 @@
 });
 </script>    
 </body>
+    
+
+    
+    
+    <body>
+<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<div id="container" style="height: 400px"></div>
+<script type="text/javascript">
+   $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: 'Timezone Analysis United States of America'
+        },
+        subtitle: {
+            text: 'Accidents Tweet Count - Time zone'
+        },
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'Tweet Count',
+            data: [
+                ['Pacific Time Zone', 29502],
+								['Eastern Time Zone', 27675],
+                ['Central Time Zone', 17421],
+                ['Mountain Time Zone', 12055],
+                ['Atlantic Time Zone', 4086],
+                ['Samoa Time Zone', 11],
+                ['Alaska Time Zone', 1256]
+            ]
+        }]
+    });
+});
+</script>    
+</body>
 </html>
