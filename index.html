@@ -6,6 +6,13 @@
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://raw.githubusercontent.com/cambecc/earth/master/public/libs/topojson/1.1.0/topojson.js"></script>
+<script src="https://raw.githubusercontent.com/mrdoob/three.js/master/build/three.js"></script>
+<script src="https://raw.githubusercontent.com/jashkenas/underscore/master/underscore.js"></script>
+<script src="https://raw.githubusercontent.com/mbostock/d3/master/d3.js"></script>
+
+    
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <script type="text/javascript">
    $(function () {
@@ -114,17 +121,12 @@
 });
 </script>    
 
+
     
-    
-<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/highcharts-3d.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<div id="container" style="height: 400px"></div>
+<div id="container2" style="height: 400px"></div>
 <script type="text/javascript">
    $(function () {
-    $('#container').highcharts({
+    $('#container2').highcharts({
         chart: {
             type: 'pie',
             options3d: {
@@ -159,5 +161,634 @@
     });
 });
 </script>    
-</body>
+    
+    
+    
+    
+    
+    
+
+<div id="container3" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+  $(function () {
+    $('#container3').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Accidents Count by Means of Transportation'
+        },
+        xAxis: {
+            categories: ['Car', 'Bike', 'Truck', 'Train', 'Bus', 'Ferry', 'Helicopter', 'Ship', 'Plane', 'Pedestrain']
+        },
+        yAxis: {
+            title: {
+                text: 'Accidents Count in Thousands'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: true
+            }
+        },
+        series: [{
+            name: 'Accidents Count',
+            data: [16.4, 2.3, 0.9, 1.6, 2.1, 0.030, 0.070, 7.2, 0.4,0.2]
+        }]
+    });
+});
+</script>    
+    
+    
+    
+    
+
+<div id="container4" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+<script type="text/javascript">
+$(function () {
+    Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+        return {
+            radialGradient: {
+                cx: 0.5,
+                cy: 0.3,
+                r: 0.7
+            },
+            stops: [
+                [0, color],
+                [1, Highcharts.Color(color).brighten(-0.3).get('rgb')]
+            ]
+        };
+    });
+    $('#container4').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Top 10 Tweeted Languages other than English'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    },
+                    connectorColor: 'silver'
+                }
+            }
+        },
+        series: [{
+            name: 'Percentage',
+            data: [
+                { name: 'French', y: 51.4 },
+                {
+                    name: 'Spanish',
+                    y: 15.6,
+                    sliced: true,
+                    selected: true
+                },
+                { name: 'Japanese', y: 12.1 },
+                { name: 'Czech', y: 6.9 }, 
+                { name: 'Russian', y: 3.4 },
+                { name: 'German', y: 2.2 },
+                { name: 'Dutch', y: 1.9 },
+                { name: 'Indonesian', y: 1.7 },
+                { name: 'Italian', y:1.2 },
+            ]
+        }]
+    });
+});
+</script>    
+
+    
+    
+    
+    
+
+
+   
+    
+    
+    
+
+<div id="container5" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+    $(function () {
+    $('#container5').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Accident Frequency in United States of America'
+        },
+        subtitle: {
+            text: 'Top 15 States'
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Accidents (Thousands)'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+                ['Pennsylvania', 2592.0],
+                ['Texas', 5206.0],
+                ['Virginia', 1874.0],
+                ['Ohio', 2144.0],
+                ['North Carolina', 3422.0],
+                ['New York', 3056.0],
+                ['Colorado', 1707.0],
+                ['Missouri', 3410.0],
+                ['Massachusetts', 2074.0],
+                ['California', 3285.0],
+                ['Florida', 2211.0],
+                ['Washington', 1685.0],
+                ['Illinois', 1864.0],
+                ['New Jersey', 3940.0],
+                ['Louisiana', 1926.0]
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y:.1f}', 
+                y: 10, 
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+</script>    
+
+    
+    
+    
+    
+
+    
+<br/>
+    <br/>
+    <br/>
+    <br/>
+
+<div id="container7" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+   $(function () {
+    $('#container7').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Accident Frequency Day wise'
+        },
+        subtitle: {
+            text: 'Accidents Happened in all the days'
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Number of Accidents in a day'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}'
+                }
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}'
+        },
+
+        series: [{
+            name: 'Accidents Count',
+            colorByPoint: true,
+            data: [{
+                name: 'Monday',
+                y: 65747,
+                drilldown: 'Monday'
+            }, {
+                name: 'Tuesday',
+                y: 56609,
+                drilldown: 'Tuesday'
+            }, {
+                name: 'Wednesday',
+                y: 42131,
+                drilldown: 'Wednesday'
+            }, {
+                name: 'Thursday',
+                y: 11391,
+                drilldown: 'Thursday'
+            }, {
+                name: 'Friday',
+                y: 21325,
+                drilldown: 'Friday'
+            }, {
+                name: 'Saturday',
+                y: 25556,
+                drilldown: 'Saturday'
+            }, {
+                name: 'Sunday',
+                y: 61014,
+                drilldown: null
+            }]
+        }],
+        drilldown: {
+            series: [{
+                name: 'Monday',
+                id: 'Monday',
+                data: [
+                    [
+                        'v11.0',
+                        24.13
+                    ],
+                    [
+                        'v8.0',
+                        17.2
+                    ],
+                    [
+                        'v9.0',
+                        8.11
+                    ],
+                    [
+                        'v10.0',
+                        5.33
+                    ],
+                    [
+                        'v6.0',
+                        1.06
+                    ],
+                    [
+                        'v7.0',
+                        0.5
+                    ]
+                ]
+            }, {
+                name: 'Tuesday',
+                id: 'Tuesday',
+                data: [
+                    [
+                        'v40.0',
+                        5
+                    ],
+                    [
+                        'v41.0',
+                        4.32
+                    ],
+                    [
+                        'v42.0',
+                        3.68
+                    ],
+                    [
+                        'v39.0',
+                        2.96
+                    ],
+                    [
+                        'v36.0',
+                        2.53
+                    ],
+                    [
+                        'v43.0',
+                        1.45
+                    ],
+                    [
+                        'v31.0',
+                        1.24
+                    ],
+                    [
+                        'v35.0',
+                        0.85
+                    ],
+                    [
+                        'v38.0',
+                        0.6
+                    ],
+                    [
+                        'v32.0',
+                        0.55
+                    ],
+                    [
+                        'v37.0',
+                        0.38
+                    ],
+                    [
+                        'v33.0',
+                        0.19
+                    ],
+                    [
+                        'v34.0',
+                        0.14
+                    ],
+                    [
+                        'v30.0',
+                        0.14
+                    ]
+                ]
+            }, {
+                name: 'Wednesday',
+                id: 'Wednesday',
+                data: [
+                    [
+                        'v35',
+                        2.76
+                    ],
+                    [
+                        'v36',
+                        2.32
+                    ],
+                    [
+                        'v37',
+                        2.31
+                    ],
+                    [
+                        'v34',
+                        1.27
+                    ],
+                    [
+                        'v38',
+                        1.02
+                    ],
+                    [
+                        'v31',
+                        0.33
+                    ],
+                    [
+                        'v33',
+                        0.22
+                    ],
+                    [
+                        'v32',
+                        0.15
+                    ]
+                ]
+            }, {
+                name: 'Thursday',
+                id: 'Thursday',
+                data: [
+                    [
+                        'v8.0',
+                        2.56
+                    ],
+                    [
+                        'v7.1',
+                        0.77
+                    ],
+                    [
+                        'v5.1',
+                        0.42
+                    ],
+                    [
+                        'v5.0',
+                        0.3
+                    ],
+                    [
+                        'v6.1',
+                        0.29
+                    ],
+                    [
+                        'v7.0',
+                        0.26
+                    ],
+                    [
+                        'v6.2',
+                        0.17
+                    ]
+                ]
+            }, {
+                name: 'Friday',
+                id: 'Friday',
+                data: [
+                    [
+                        'v12.x',
+                        0.34
+                    ],
+                    [
+                        'v28',
+                        0.24
+                    ],
+                    [
+                        'v27',
+                        0.17
+                    ],
+                    [
+                        'v29',
+                        0.16
+                    ]
+                ]
+            }]
+        }
+    });
+});
+</script>    
+
+    
+    <div id="canvas-svg" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+<script type="text/javascript">
+var root = {
+"name":"tweets",
+"children":[
+{"name":"johnmeriggi","children":[{"name":"johnmeriggi", "size":1458}]},
+{"name":"QCTrafficAlerts","children":[{"name":"QCTrafficAlerts", "size":804}]},
+{"name":"lahoma_porter","children":[{"name":"lahoma_porter", "size":535}]},
+{"name":"newszbreakintfc","children":[{"name":"newszbreakintfc", "size":514}]},
+{"name":"TotalTrafficNYC","children":[{"name":"TotalTrafficNYC", "size":429}]},
+{"name":"RW911","children":[{"name":"RW911", "size":420}]},
+{"name":"TXI45thm","children":[{"name":"TXI45thm", "size":414}]},
+{"name":"TotalTrafficDFW","children":[{"name":"TotalTrafficDFW", "size":410}]},
+{"name":"TXI10thm","children":[{"name":"TXI10thm", "size":394}]},
+{"name":"1trafficalertus","children":[{"name":"1trafficalertus", "size":384}]},
+{"name":"TRAFidf","children":[{"name":"TRAFidf", "size":341}]},
+{"name":"TXI35thm","children":[{"name":"TXI35thm", "size":336}]},
+{"name":"911Relay","children":[{"name":"911Relay", "size":329}]},
+{"name":"511DFWPPAll","children":[{"name":"511DFWPPAll", "size":318}]},
+{"name":"511dfw","children":[{"name":"511dfw", "size":310}]},
+{"name":"511northernva","children":[{"name":"511northernva", "size":305}]},
+{"name":"houstontranstar","children":[{"name":"houstontranstar", "size":291}]},
+{"name":"TotalTrafficAUS","children":[{"name":"TotalTrafficAUS", "size":289}]},
+{"name":"511centralva","children":[{"name":"511centralva", "size":286}]},
+{"name":"TotalTrafficMIA","children":[{"name":"TotalTrafficMIA", "size":284}]},
+{"name":"internetromania","children":[{"name":"internetromania", "size":276}]},
+{"name":"dfrtraffic","children":[{"name":"dfrtraffic", "size":271}]},
+{"name":"rockinghorsemin","children":[{"name":"rockinghorsemin", "size":269}]},
+{"name":"doumoto5","children":[{"name":"doumoto5", "size":265}]},
+{"name":"OHI71thm","children":[{"name":"OHI71thm", "size":248}]},
+{"name":"PAI76thm","children":[{"name":"PAI76thm", "size":237}]},
+{"name":"TotalTrafficATL","children":[{"name":"TotalTrafficATL", "size":233}]},
+{"name":"show_me_please1","children":[{"name":"show_me_please1", "size":230}]},
+{"name":"TotalTrafficOKC","children":[{"name":"TotalTrafficOKC", "size":229}]}]
+  
+};
+
+var diameter = 600,
+    format = d3.format(",d"),
+    color = d3.scale.category20();
+
+var bubble = d3.layout.pack()
+    .sort(null)
+    .size([diameter, diameter])
+    .padding(1.5);
+
+var svg = d3.select("#canvas-svg").append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+    .attr("class", "bubble");
+
+var node = svg.selectAll(".node")
+  .data(bubble.nodes(classes(root))
+  .filter(function(d) { return !d.children; }))
+.enter().append("g")
+  .attr("class", "node")
+  .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+node.append("circle")
+  .attr("r", function(d) { return d.r; })
+  .style("fill", function(d) { return color(d.packageName); });
+
+node.append("text")
+  .attr("dy", "0em")
+  .style("text-anchor", "middle")
+  .text(function(d) { return d.className.substring(0, d.r / 3); });
+
+node.append("text")
+  .attr("dy", "1.3em")
+  .style("font-size", "12px")
+  .style("text-anchor", "middle")
+  .text(function(d) { return "$" + format(d.value).substring(0, d.r / 3); });
+
+function classes(root) {
+  var classes = [];
+
+  function recurse(name, node) {
+    if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
+    else classes.push({packageName: name, className: node.name, value: node.size});
+  }
+
+  recurse(null, root);
+  return {children: classes};
+}
+
+d3.select(self.frameElement).style("height", diameter + "px");
+
+</script>    
+ 
+    
+    <br>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+   <form action="http://www.wordle.net/advanced" method="POST">
+<textarea name="text" style="display:none">
+(accident,78393)
+(RT,18133)
+(car,6055)
+(de,5684)
+(traffic,4304)
+(&amp;,4046)
+(Rd,3804)
+(blocked,3601)
+(lane,3074)
+(NB,2934)
+(un,2770)
+(la,2759)
+(Car,2685)
+(SB,2682)
+(St,2224)
+(stop,2017)
+(lanes,1983)
+(EB,1908)
+(delay,1902)
+(WB,1859)
+(due,1853)
+(right,1839)
+(no,1834)
+(left,1831)
+(Ave,1808)
+(en,1731)
+(out,1721)
+(people,1660)
+(Exit,1476)
+(Road,3383)
+(killed,1339)
+(cleared,1302)
+(RD,1269)
+(Vehicle,1251)
+(shoulder,1207)
+(Traffic,1089)
+(dies,1089)
+(died,1083)
+(involving,1065)
+(time,1043)
+(Hwy,1032)
+(did,1015)
+(Blvd,999)
+(Amtrak,975)
+(le,928)
+(closed,1793)
+(injured,898)
+(Lawyers,1669)
+(dans,895)
+(pour,876)
+(bad,849)
+(sur,827)
+(Motor,806)
+(DAMAGE,802)
+(involved,799)
+(last,763)
+(l'accident,761)
+(hit,752)
+(vehicle,747)
+(I-95,734)
+(One,726)
+(train,709)
+(today,708)
+(Fatal,701)
+</textarea>
+<input type="submit">
+</form>
+    </body>
 </html>
