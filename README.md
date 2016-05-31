@@ -1,5 +1,8 @@
 # Reach Me
-Accident Analysis on Twitter
+Reach Me is a system designed using Apache Spark to provide analysis of accidents based on Twitter data. This
+system has been integrated with MongoDB so that millions of tweets per day could be processed and analyzed using
+Spark/HDFS in the form of ad-hoc queries.
+
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689471/b8932162-2744-11e6-892b-430b3f46a07a.png)
 
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689373/440e8782-2744-11e6-99c0-511dc9f7d963.png)
