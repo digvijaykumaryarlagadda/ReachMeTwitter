@@ -11,10 +11,13 @@ Spark/HDFS in the form of ad-hoc queries.
 *	Visualization Tools: D3js.org, Highcharts.com, Vida.io and wordle.net 
 
 #Visualizations:
+<br>
+<br><br><br><br><br><br>
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689471/b8932162-2744-11e6-892b-430b3f46a07a.png)
-
+&nbsp;
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689373/440e8782-2744-11e6-99c0-511dc9f7d963.png)
-
+&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689427/88c131a4-2744-11e6-92b6-1cc7a2f949d0.png)
 
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689444/9e13a3b6-2744-11e6-9dfe-11548dbfe68b.png)
