@@ -3,12 +3,12 @@ Reach Me is a system designed using Apache Spark to provide analysis of accident
 system has been integrated with MongoDB so that millions of tweets per day could be processed and analyzed using
 Spark/HDFS in the form of ad-hoc queries.
 
-Technologies used: 
-•	Programming Languages: Python, Java Script, Scala 
-•	Web Technologies: HTML & CSS 
-•	Database: MongoDB 
-•	Query Language: Spark SQL 
-•	Visualization Tools: D3js.org, Highcharts.com, Vida.io and wordle.net 
+#Technologies used: 
+*	Programming Languages: Python, Java Script, Scala 
+*	Web Technologies: HTML & CSS 
+*	Database: MongoDB 
+*	Query Language: Spark SQL 
+*	Visualization Tools: D3js.org, Highcharts.com, Vida.io and wordle.net 
 
 
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689471/b8932162-2744-11e6-892b-430b3f46a07a.png)
