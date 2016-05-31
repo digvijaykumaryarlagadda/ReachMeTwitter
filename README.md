@@ -28,5 +28,5 @@ Spark/HDFS in the form of ad-hoc queries.
 
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15690244/45605440-2748-11e6-9dd1-9a942dca7292.png)
 
-
+![untitled](https://cloud.githubusercontent.com/assets/16812117/15690327/a3e4620e-2748-11e6-98df-fde5eadfcefa.png)
 ![untitled](https://cloud.githubusercontent.com/assets/16812117/15689742/12de8cb4-2746-11e6-94f3-fb1ee29a45ff.jpg)
